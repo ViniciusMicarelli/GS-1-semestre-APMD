@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerenciamento de Gastos de Água</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Despesas</h1>
+  <nav>
+    <ul>
+      <li><a href="cadastro.html">Cadastro de Clientes</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <div class="container">
+    <form id="expenseForm">
+      <h1>Cadastro de Despesas</h1>
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" required>
+
+      <label for="valor">Valor:</label>
+      <input type="number" id="valor" name="valor" required>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+
+      <input type="submit" value="Cadastrar">
+    </form>
+  </div>
+
+  <h2>Tela de Consulta</h2>
+
+  <div class="container">
+    <input type="text" id="searchInput" placeholder="Buscar">
+    <select id="filterSelect">
+      <option value="descricao">Descrição</option>
+      <option value="valor">Valor</option>
+      <option value="data">Data</option>
+    </select>
+  </div>
+
+  <table id="expenseTable">
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linhas da tabela de consulta serão adicionadas dinamicamente aqui -->
+    </tbody>
+  </table>
+
+  <h2>Análise de Consumo</h2>
+  <div class="container expense-summary"></div>
+
+  <div class="container">
+    <h3>Total de Despesas:</h3>
+    <span id="totalExpenses">R$ 0.00</span>
+  </div>
+
+  <div class="container">
+    <h3>Média de Despesas:</h3>
+    <span id="averageExpense">R$ 0.00</span>
+  </div>
+
+  <div class="container">
+    <h3>Maior Despesa:</h3>
+    <span id="maxExpense">R$ 0.00</span>
+  </div>
+
+  <div class="container">
+    <h3>Menor Despesa:</h3>
+    <span id="minExpense">R$ 0.00</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
